@@ -73,6 +73,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        one_houre: one_houre {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LBKT &kp N1 &kp DOT &kp N0 &kp N0 &kp H &kp LBRC>;
+            label = "ONE_HOURE";
+        };
+
+        thirty_minutes: thirty_minutes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LBKT &kp N0 &kp DOT &kp N5 &kp N0 &kp H &kp LBRC>;
+            label = "THIRTY_MINUTES";
+        };
     };
 
     keymap {
@@ -91,10 +105,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESC  &trans  &trans  &trans  &trans                       &kp F7            &kp F2             &kp F3     &kp F4  &kp F5
-&trans   &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6            &mkp MB1           &mkp RCLK  &kp F9  &kp F10
-&trans   &trans  &trans  &trans  &trans  &trans      &trans   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans  &kp F11
-&trans   &trans  &trans  &trans  &trans  &trans      &trans   &trans                                                  &kp F12
+&kp ESC          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                       &kp F7            &kp F2             &kp F3     &kp F4  &kp F5
+&one_houre       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans      &kp F13  &kp F6            &mkp MB1           &mkp RCLK  &kp F9  &kp F10
+&thirty_minutes  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans      &trans   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON  &trans  &kp F11
+&trans           &trans        &trans        &trans        &trans        &trans      &trans   &trans                                                  &kp F12
             >;
         };
 
