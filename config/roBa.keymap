@@ -93,7 +93,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 3 SPACE  &lt_to_layer_0 4 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                           &mt RIGHT_SHIFT DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         FUNCTION {
